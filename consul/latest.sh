@@ -45,9 +45,9 @@ which consul &>/dev/null || {
   
   # copy consul configuration 
   mkdir --parents /etc/consul.d
-  curl -sL -o /etc/consul.d/server.hcl https://raw.githubusercontent.com/andrewpopa/bash-provisioning/main/consul/server.hcl
+  curl -sL -o /etc/consul.d/consul.hcl https://raw.githubusercontent.com/andrewpopa/bash-provisioning/main/consul/server.hcl
   chown --recursive consul:consul /etc/consul.d
-  chmod 640 /etc/consul.d/server.hcl
+  chmod 640 /etc/consul.d/consul.hcl
   
   # copy service definition
   curl -sL -o /etc/systemd/system/consul.service https://raw.githubusercontent.com/andrewpopa/bash-provisioning/main/consul/consul.service
