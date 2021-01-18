@@ -55,5 +55,4 @@ which consul &>/dev/null || {
   # enable and start service
   systemctl enable consul
   systemctl start consul
-  systemctl status consul
 }
