@@ -7,7 +7,7 @@ log_level          = "INFO"
 server             = true
 ui                 = true
 non_voting_server  = false
-retry_join         = ["192.168.178.31", "192.168.178.32", "192.168.178.33"]
+retry_join         = ["192.168.178.51", "192.168.178.52", "192.168.178.53"]
 
 autopilot         = {
   cleanup_dead_servers      = true,
