@@ -45,12 +45,12 @@ which consul &>/dev/null || {
   
   # copy consul configuration 
   mkdir --parents /etc/consul.d
-  curl -sL -o /etc/consul.d/server.hcl https://raw.githubusercontent.com/andrewpopa/andrewpopa/bash-provisioning/main/consul/server.hcl
+  curl -sL -o /etc/consul.d/server.hcl https://raw.githubusercontent.com/andrewpopa/bash-provisioning/main/consul/server.hcl
   chown --recursive consul:consul /etc/consul.d
   chmod 640 /etc/consul.d/server.hcl
   
   # copy service definition
-  curl -sL -o /etc/systemd/system/consul.service https://raw.githubusercontent.com/andrewpopa/andrewpopa/bash-provisioning/main/consul/consul.service
+  curl -sL -o /etc/systemd/system/consul.service https://raw.githubusercontent.com/andrewpopa/bash-provisioning/main/consul/consul.service
     
   # enable and start service
   systemctl enable consul
