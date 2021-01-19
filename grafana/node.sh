@@ -24,7 +24,7 @@ which node_exporter &>/dev/null || {
 curl -sL -o /etc/systemd/system/node_exporter.service https://raw.githubusercontent.com/andrewpopa/bash-provisioning/main/grafana/node_exporter.service
 
 systemctl enable node_exporter.service
-systemctl start node_exporter.servic
+systemctl start node_exporter.service
 
 [ -d /etc/consul.d ] && {
   curl -sL -o /etc/consul.d/node_exporter.hcl https://raw.githubusercontent.com/andrewpopa/bash-provisioning/main/grafana/node_exporter.hcl

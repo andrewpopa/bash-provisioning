@@ -53,6 +53,6 @@ which consul &>/dev/null || {
   curl -sL -o /etc/systemd/system/consul_client.service https://raw.githubusercontent.com/andrewpopa/bash-provisioning/main/consul/consul_client.service
     
   # enable and start service
-  systemctl enable consul
-  systemctl start consul
+  systemctl enable consul_client.service
+  systemctl start consul_client.service
 }
