@@ -30,4 +30,11 @@ systemctl start node_exporter.service
   curl -sL -o /etc/consul.d/node_exporter.hcl https://raw.githubusercontent.com/andrewpopa/bash-provisioning/main/prometheus/node_exporter.hcl
 }
 
-systemctl reload consul_client.service
+which consul &>/dev/null && {
+  systemctl reload consul.service
+}
+
+which consul_client &>/dev/null && {
+  systemctl reload consul_client.service
+}
+
