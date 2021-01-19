@@ -50,9 +50,9 @@ which consul &>/dev/null || {
   chmod 640 /etc/consul.d/consul.hcl
   
   # copy service definition
-  curl -sL -o /etc/systemd/system/consul_client.service https://raw.githubusercontent.com/andrewpopa/bash-provisioning/main/consul/consul_client.service
+  curl -sL -o /etc/systemd/system/consul.service https://raw.githubusercontent.com/andrewpopa/bash-provisioning/main/consul/consul_client.service
     
   # enable and start service
-  systemctl enable consul_client.service
-  systemctl start consul_client.service
+  systemctl enable consul.service
+  systemctl start consul.service
 }
