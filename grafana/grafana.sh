@@ -17,5 +17,5 @@ which grafana-server &>/dev/null || {
 
 [ -d /etc/consul.d ] && {
   curl -sL -o /etc/consul.d/grafana.hcl https://raw.githubusercontent.com/andrewpopa/bash-provisioning/main/grafana/grafana.hcl
-  systemctl reload consul_client.service
+  systemctl reload consul.service
 }
