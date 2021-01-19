@@ -30,4 +30,4 @@ systemctl start node_exporter.service
   curl -sL -o /etc/consul.d/node_exporter.hcl https://raw.githubusercontent.com/andrewpopa/bash-provisioning/main/grafana/node_exporter.hcl
 }
 
-systemctl reload consul
+systemctl reload consul_client.service
