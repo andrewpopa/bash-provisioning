@@ -36,7 +36,7 @@ systemctl start prometheus.service
   curl -sL -o /etc/consul.d/prometheus.hcl https://raw.githubusercontent.com/andrewpopa/bash-provisioning/main/prometheus/prometheus.hcl
 }
 
-systemctl reload consul_client.service
+systemctl reload consul.service
 curl -sL -o /etc/prometheus/prometheus.ctpl https://raw.githubusercontent.com/andrewpopa/bash-provisioning/main/prometheus/prometheus.ctpl
 curl -sL -o /tmp/consul_template.sh https://raw.githubusercontent.com/andrewpopa/bash-provisioning/main/consul/consul_template.sh
 bash /tmp/consul_template.sh
