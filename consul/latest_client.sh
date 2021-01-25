@@ -20,7 +20,7 @@ else
 fi
 
 # get current version of consul that is not beta/alpha
-CONSULVER=$(curl -sL https://releases.hashicorp.com/consul/index.json | jq -r '.versions[].version' | sort -V | egrep -v 'ent|beta|rc|alpha' | tail -n1)
+CONSULVER=$(curl -sL https://releases.hashicorp.com/consul/index.json | jq -r '.versions[].version' | sort -V | egrep 'ent' | egrep -v 'beta|rc' | tail -n1)
 
 # check if consul is installed
 # if not, download and configure service
