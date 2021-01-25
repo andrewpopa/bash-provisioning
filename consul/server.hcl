@@ -7,6 +7,7 @@ log_level          = "INFO"
 server             = true
 ui                 = true
 non_voting_server  = false
+enable_local_script_checks = true
 retry_join         = ["192.168.178.51", "192.168.178.52", "192.168.178.53"]
 
 autopilot         = {
